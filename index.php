@@ -29,7 +29,7 @@
 <body>
 
 <!--Banner-->
-<img src="banner.jpg" height="25%", width="25%";
+<img src="banner.jpg" height="25%", width="25%">
 
 <!-- Navigation -->
 <ul>
