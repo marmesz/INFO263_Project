@@ -1,0 +1,194 @@
+/* Keep your CSS in here */
+
+.float-mid{
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    padding-top: 54px;
+}
+
+header{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: larger;
+    text-decoration: underline darkgrey;
+}
+
+/* Responsive table */
+
+table {
+    margin:0;
+    padding:0;
+    border: 0; /* no border */
+    border-collapse: collapse;
+    width: 100%;
+}
+table td{
+    border-bottom: 2px solid darkgrey;
+    padding-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+table th{
+    border-bottom: 2px solid darkgrey;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+table tr {
+    padding: 10px;
+}
+
+.table-header{
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    text-decoration: underline darkgrey;
+}
+
+.table-column-head{
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 996px){
+
+    .table-no-underline {
+        border-bottom: None;
+    }
+
+    .orientations{
+        width: 107px;
+    }
+
+    .bigNoShow {
+        display: none;
+    }
+
+
+
+    table.alignment td {
+        border-right: 2px solid darkgrey;
+
+    }
+
+    .maxwidth-empty-second{
+        width: 107px;
+    }
+
+    .target{
+        width: 250px;
+    }
+
+    .noRightBorder {
+        border-right: None;
+    }
+
+}
+
+.maxwidth-title{
+    width: 150px;
+}
+
+
+.noRightBorder {
+    border-right: None;
+}
+
+/* input form for
+
+ */
+
+.formheader{
+    text-align: left;
+    padding-top: 80px;
+
+
+}
+
+/* CSS response to small screen */
+
+@media screen and (max-width: 995px) {
+
+    .bottomTD{
+        border-bottom: none;
+    }
+
+    .underPadding {
+        padding-bottom: 30px;
+    }
+
+    table thead {
+        display: None /* no header */
+    }
+
+    table tr { /*styling for each row*/
+        display: block; /*sets up for 1 element per line*/
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        /*margin-bottom: 15px;*/
+    }
+
+    table td { /*styling for each individual cell*/
+        border-right: none;
+        border-top: 1px solid darkgrey;
+        display: block;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    table td:first-child {
+        border-right: none;
+        border-top: None;
+    }
+
+    table td:before {
+        border-right: none;
+        display: block;
+        content: attr(data-label);
+        font-weight: bold;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+
+    }
+
+    table td:after{
+        padding-bottom: 10px;
+    }
+
+    .formheader{
+        padding-top: 56px;
+
+    }
+
+    .noHeight{
+        padding-top: 0px;
+        padding: 0px;
+        border-bottom: None;
+    }
+
+    .background{
+        background-color: lightgrey;
+    }
+
+    .noShow {
+        display: None;
+    }
+}
+
+@media screen and (max-width: 775px){
+    table td:before {
+        position: relative;
+    }
+
+
+}
