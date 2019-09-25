@@ -5,52 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Tyre Town</title>
+    <title>Tyre Town Invoice Search</title>
 
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- error handling function -->
-    <script>  //error handling function + test in line 10
-        onerror = errorHandler;
-        function errorHandler(message, link, line) {
-            message = "Error Encountered:\n\n";
-            message += "URL: " + link + "\n";
-            message += "Line: " + line + "\n";
-            alert(message);
-            return true;
-        }
-    </script>
+    <script src="scripts/error_handling.js"></script>
 </head>
 
+
 <body>
-
-<!--Banner-->
-<img src="banner.jpg" height="25%", width="25%">
-
-<!-- Navigation -->
-<ul>
-    <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">News</a></li>
-    <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
-</ul>
-
     <!-- Page content -->
     <div class="container">
-
-        <div class="col-lg-12 ">
-            <h2 class="mt-5 text-center">Tyre Town Invoice Search</h2>
+        <div class="row">
+            <nav class="navbar navbar-light">
+                <a class="navbar-brand" href="index.php">
+                    <img src="logo.svg" width="50" height="50" alt="">  Tyre Town
+                </a>
+            </nav>
+        </div><br>
+        <div class="row">
+            <div class="col-5">
+                <div class="form-group">
+                    <label for="invoiceID">Tyre Town Invoice Search</label>
+                    <input type="text" class="form-control" id="invoiceID" placeholder="Enter Invoice Number">
+                </div>
+            </div>
         </div>
-
-
-        <form method="post" action="index.php">
-            <div class="float-mid"><input type="text" name="input" size="25" id="receiptID" placeholder="Enter Invoice Number">
-                <input type="submit" name="submitButton" value="Submit"></div></form>
-
+        <div class="row">
+            <div class="col-2">
+                <button type="button" class="btn btn-outline-success">Submit</button>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-2">
+                <button type="button" class="btn btn-outline-danger" onclick="document.getElementById('invoiceID').value = ''">Reset</button>
+            </div>
+        </div>
+    </div>
 
 
 
