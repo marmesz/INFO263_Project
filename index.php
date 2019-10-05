@@ -55,3 +55,10 @@
     ?>
 
 </body>
+
+<footer>
+    <div class="container text-center">
+        <small>TyreTown - &copy;2019</small>
+    </div>
+</footer>
+</html>

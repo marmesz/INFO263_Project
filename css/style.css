@@ -57,6 +57,12 @@ body {
     padding-bottom: 10px;
 }
 
+/* Footer */
+footer {
+    color: #388087;
+    font-family: 'Roboto', sans-serif;
+    padding: 1.5rem;
+}
 /* Various Screen Sizes */
 
 @media screen and (min-width: 996px) {
