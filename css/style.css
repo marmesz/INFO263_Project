@@ -1,154 +1,115 @@
-/* Keep your CSS in here */
-
-.float-mid{
-    padding: 20px;
-    text-align: center;
-}
-
+/* Main Body */
 body {
-    background-color: #eafff2;
-    padding-top: 54px;
+    background-color: #f6f6f2;
+    color: #6fb3b8;
+    font-family: 'Roboto', sans-serif;
+}
+.btn-submit {
+    color: #388087;
+    border-color: #388087;
+}
+.btn-submit:hover {
+    color: white;
+    background-color: #6fb3b8;
+    border-color: #388087;
 }
 
-header{
-    text-align: center;
-    font-weight: bold;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-size: larger;
-    text-decoration: underline darkgrey;
+/* Header and Nav-bar */
+.nav-logo {
+    font-family: 'Lobster', cursive;
+    font-size: 55px;
+    color: #388087;
+}
+.nav-logo:hover {
+    font-family: 'Lobster', cursive;
+    font-size: 55px;
+    color: #6fb3b8;
 }
 
-/* Responsive table */
-
-table {
-    margin:0;
-    padding:0;
-    border: 0; /* no border */
-    border-collapse: collapse;
-    width: 100%;
-}
-table td{
-    border-bottom: 2px solid darkgrey;
-    padding-top: 10px;
-    padding: 10px;
-    text-align: center;
-}
-table th{
-    border-bottom: 2px solid darkgrey;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 10px;
-}
-table tr {
-    padding: 10px;
-}
-
-.table-header{
-    font-size: larger;
-    text-align: center;
-    font-weight: bold;
-    padding: 20px;
-    text-decoration: underline darkgrey;
-}
+/* Table */
 
 .table-column-head{
     font-weight: bold;
 }
+.thead-theme {
+    background-color: #6fb3b8;
+    color: white;
+}
+.table {
+    background-color: #badfe7;
+    font-family: 'Roboto', sans-serif;
+}
+.btn-dropdown {
+    background-color: #388087;
+    color: white;
+}
+.btn-dropdown:hover {
+    color: white;
+    background-color: #6fb3b8;
+    border-color: #388087;
+}
+.axle-subtitle {
+    color: #388087;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
+/* Various Screen Sizes */
 
-@media screen and (min-width: 996px){
-
+@media screen and (min-width: 996px) {
     .table-no-underline {
         border-bottom: None;
     }
-
-    .orientations{
+    .orientations {
         width: 107px;
     }
-
-    .bigNoShow {
-        display: none;
-    }
-
-
-
     table.alignment td {
         border-right: 2px solid darkgrey;
-
     }
-
-    .maxwidth-empty-second{
+    .maxwidth-empty-second {
         width: 107px;
     }
-
-    .target{
+    .target {
         width: 250px;
     }
-
     .noRightBorder {
         border-right: None;
     }
-
 }
-
-.maxwidth-title{
-    width: 150px;
-}
-
-
-.noRightBorder {
-    border-right: None;
-}
-
-/* input form for
-
- */
-
-.formheader{
-    text-align: left;
-    padding-top: 80px;
-
-
-}
-
-/* CSS response to small screen */
 
 @media screen and (max-width: 995px) {
 
     .bottomTD{
         border-bottom: none;
     }
-
     .underPadding {
         padding-bottom: 30px;
     }
-
     table thead {
-        display: None /* no header */
+        display: None;
     }
-
-    table tr { /*styling for each row*/
-        display: block; /*sets up for 1 element per line*/
-        padding-top: 0px;
-        padding-bottom: 0px;
-
-        /*margin-bottom: 15px;*/
+    table tr {
+        display: block;
+        padding-top: 0;
+        padding-bottom: 0;
     }
-
-    table td { /*styling for each individual cell*/
+    table td {
         border-right: none;
         border-top: 1px solid darkgrey;
         display: block;
         position: relative;
         padding-bottom: 10px;
     }
-
+    .table td, .table th {
+        padding-top: 1.5rem;
+    }
     table td:first-child {
         border-right: none;
         border-top: None;
     }
-
     table td:before {
         border-right: none;
         display: block;
@@ -159,37 +120,14 @@ table tr {
         left: 5px;
         padding-right: 5px;
         padding-bottom: 10px;
-
     }
-
     table td:after{
         padding-bottom: 10px;
     }
-
-    .formheader{
-        padding-top: 56px;
-
-    }
-
-    .noHeight{
-        padding-top: 0px;
-        padding: 0px;
-        border-bottom: None;
-    }
-
     .background{
-        background-color: lightgrey;
+        background-color: #6fb3b8;
     }
-
     .noShow {
         display: None;
     }
-}
-
-@media screen and (max-width: 775px){
-    table td:before {
-        position: relative;
-    }
-
-
 }
