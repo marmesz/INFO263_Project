@@ -1,4 +1,7 @@
-/* Main Body */
+/*---------- 
+    Main Body 
+----------*/
+
 body {
     background-color: #f6f6f2;
     color: #6fb3b8;
@@ -14,7 +17,24 @@ body {
     border-color: #388087;
 }
 
-/* Header and Nav-bar */
+/* Spacings used to replace depreciated <br> HTML tag */
+.br-1 {
+    margin-bottom: 1em;
+}
+.br-2 {
+    margin-bottom: 2em;
+}
+.br-4 {
+    margin-bottom: 4em;
+}
+.br-4t {
+    margin-top: 4em;
+}
+
+/*---------- 
+    Header and Nav-bar 
+----------*/
+
 .nav-logo {
     font-family: 'Lobster', cursive;
     font-size: 55px;
@@ -25,8 +45,9 @@ body {
     font-size: 55px;
     color: #6fb3b8;
 }
-
-/* Table */
+/*---------- 
+    Table 
+----------*/
 
 .table-column-head{
     font-weight: bold;
@@ -57,13 +78,19 @@ body {
     padding-bottom: 10px;
 }
 
-/* Footer */
+/*---------- 
+    Footer 
+----------*/
+
 footer {
     color: #388087;
     font-family: 'Roboto', sans-serif;
     padding: 1.5rem;
 }
-/* Various Screen Sizes */
+
+/*----------  
+    Optimisation for Various Screen Sizes 
+----------*/
 
 @media screen and (min-width: 996px) {
     .table-no-underline {

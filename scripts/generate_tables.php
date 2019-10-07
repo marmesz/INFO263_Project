@@ -1,22 +1,29 @@
 <?php
+    // SQL Processes, gathers data from database
     if (!empty($_POST['input']))
     {
+        // Appends invoice no. specific SQL code to query from request.php
         $search_term = mysqli_real_escape_string($conn, $_POST['input']);
         $customer_query .= " WHERE invoice.invoice_id LIKE '%" . $search_term . "%' ";
         $invoice_query .= " WHERE invoice_id LIKE '%" .$search_term."%' ";
         $garage_query .= " WHERE invoice.invoice_id LIKE '%" .$search_term."%' ";
         $alignment_query .= " WHERE invoice_id LIKE '%" .$search_term."%' ";
 
+        // Creates query object
         $cust_query = mysqli_query($conn, $customer_query);
         $inv_query = mysqli_query($conn, $invoice_query);
         $gar_query = mysqli_query($conn, $garage_query);
         $align_query = mysqli_query($conn, $alignment_query);
 
+        // Grabs details specific to selected invoice
         $cust_row = mysqli_fetch_array($cust_query);
         $inv_row = mysqli_fetch_array($inv_query);
         $gar_row = mysqli_fetch_array($gar_query);
         $align_row = mysqli_fetch_array($align_query);?>
-        <div class="container">
+
+        <!-- Inserts the tables and information into the website
+             This entire block is inserted into index.php when require_once is called -->
+        <div class="container br-1">
             <!-- Customer Information -->
             <button id="customerButton" class="btn btn-dropdown dropdown-toggle w-50" data-toggle="dropdown">Customer Information</button>
             <div class="col-lg-12 table-responsive">
@@ -50,9 +57,8 @@
                 </table>
             </div>
         </div>
-        <br>
         <!-- Invoice Information -->
-        <div class="container">
+        <div class="container br-1">
             <button id="invoiceButton" class="btn btn-dropdown dropdown-toggle w-50">Invoice Information</button>
             <div class="col-lg-12 table-responsive">
                 <table id="invoiceTable" class="table table-bordered">
@@ -85,9 +91,8 @@
                 </table>
             </div>
         </div>
-        <br>
         <!-- Garage Information -->
-        <div class="container">
+        <div class="container br-1">
             <button id="garageButton" class="btn btn-dropdown dropdown-toggle w-50">Garage Information</button>
             <div class="col-lg-12 table-responsive">
                 <table id="garageTable" class="table table-bordered">
@@ -114,16 +119,12 @@
                 </table>
             </div>
         </div>
-        <?php
-
-        ?>
-        <br>
 
         <!-- Alignment Information -->
         <div class="container table-responsive">
             <button id="alignmentButton" class="btn btn-dropdown dropdown-toggle w-50">Alignment Information</button>
             <div id="alignmentDiv" class="col-lg-12">
-                <h3 class="axle-subtitle">Rear Axle</h3>
+                <h3 class="axle-subtitle br-4t">Rear Axle</h3>
                 <table id="alignmentTable" class="table table-bordered">
                     <thead class="thead-theme">
                     <th class="maxwidth-title" scope="col">Camber</th>
@@ -144,7 +145,7 @@
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head">Right</td>
                         <td data-label="Before"><?php echo $align_row['3'];?></td>
-                        <td class="noShow target"></td>
+                        <td class="noShow target"/>
                         <td data-label="Actual"><?php echo $align_row['4'];?></td>
                     </tr>
                     <tr>
@@ -177,7 +178,7 @@
                         <td class="table-no-underline noShow">&nbsp;</td>
                         <td class="table-column-head orientations">Right</td>
                         <td data-label="Before"><?php echo $align_row['9'];?></td>
-                        <td class="noShow target"></td>
+                        <td class="noShow target"/>
                         <td data-label="Actual"><?php echo $align_row['10'];?></td>
                     </tr>
                     <tr>
@@ -190,7 +191,7 @@
                     </tbody>
                 </table>
 
-                <table class="alignment table table-bordered">
+                <table class="alignment table table-bordered br-4">
                     <thead class="thead-theme">
                     <th class="maxwidth-title" scope="col">Geometrical driving axis</th>
                     <th scope="col">&nbsp;</th>
@@ -208,7 +209,6 @@
                     </tr>
                     </tbody>
                 </table>
-                <br><br>
                 <h3 class="axle-subtitle">Front Axle</h3>
                 <table class="alignment table table-bordered">
                     <thead class="thead-theme">
@@ -417,11 +417,9 @@
                         <td class="table-column-head orientations">Right</td>
                         <td data-label="Before"><?php echo $align_row['51'];?></td>
                         <td class="noShow target">33°00' +/-1°30'</td>
-                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $align_row['52'];?></td>
+                        <td class="underPadding bottomTD" data-label="Actual"><?php echo $align_row['52'];}?></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    <?php } ?>
-

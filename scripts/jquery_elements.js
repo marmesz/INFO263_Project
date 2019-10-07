@@ -18,8 +18,4 @@ $(document).ready(function(){
     $("#alignmentButton").click(function(){
         $("#alignmentDiv").toggle(100);
     });
-
-    // TD Colour Changing
-    var alignmentTable = document.getElementById("#alignmentTable");
-
 });
